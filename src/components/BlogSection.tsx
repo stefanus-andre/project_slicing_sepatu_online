@@ -47,21 +47,17 @@ export default function BlogSection() {
           </article>
         ))}
       </div>
-      <footer className="bg-white border-t border-[#2f3640] py-6">
-        <div className="max-w-[1200px] mx-auto px-6 flex justify-center gap-6 flex-wrap">
-          <img alt="ATM Bersama logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/fad4acbf-db6e-469b-b263-e98f2b0c5d19.jpg" />
-          <img alt="Danamon bank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/36b9eb5a-bfd3-4301-934d-791dfb06b01c.jpg" />
-          <img alt="BNI bank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/fa13feb2-f440-4bc1-938a-61200d6ea8d2.jpg" />
-          <img alt="Bank BRI logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/713aabff-f761-4379-596b-9a92cd84c65a.jpg" />
-          <img alt="CIMB Niaga bank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/886fb683-8ba9-4ac8-17b0-857bfe6232fd.jpg" />
-          <img alt="Mandiri bank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/4fd48108-9e3e-42a5-f734-6c0f9f932d97.jpg" />
-          <img alt="BCA bank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/07a7fcdc-5b23-4cd1-0f6c-af3261469ba2.jpg" />
-          <img alt="PermataBank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/6fe1a8a5-ee55-4d23-164a-bd9024f242fd.jpg" />
-          <img alt="Maybank logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/b12b0f4a-93d7-4cb6-8910-1d105089e869.jpg" />
-          <img alt="Mastercard logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/f96a9374-d50d-446a-00ce-c0d974f6c199.jpg" />
-          <img alt="Visa logo in grayscale" className="h-7 object-contain" src="https://storage.googleapis.com/a1aa/image/f9c26de5-9ea3-4e3f-b51f-6ffdc4684c1d.jpg" />
-        </div>
-      </footer>
+    <footer className="bg-white border-t border-[#2f3640] py-6">
+  <div className="max-w-[1200px] mx-auto px-2 flex justify-center gap-6 flex-wrap">
+    <img 
+      alt="Your Image Description" 
+      className="w-180 h-auto object-contain"  // Set width to 32
+      src="https://jyffootwear.com/wp-content/uploads/2019/10/web-3-1.png" 
+    />
+  </div>
+</footer>
+
+
     </section>
   );
 }
