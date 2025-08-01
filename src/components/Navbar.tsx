@@ -7,6 +7,10 @@ export default function Navbar() {
   const [isBundle1Open, setIsBundle1Open] = useState(false);
   const [isBundle2Open, setIsBundle2Open] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+
+  
+
 
   const toggleBelanja = () => {
     setIsBelanjaOpen(!isBelanjaOpen);
@@ -30,12 +34,16 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+   const toggleSearchModal = () => 
+    setIsSearchModalOpen(!isSearchModalOpen);
+
+
   return (
     <header className="bg-[#2f4f6f] text-white shadow sticky top-0 z-50">
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* Left Icons */}
-      <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute left-6">
-        <button aria-label="Search" className="focus:outline-none">
+     <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute left-6">
+        <button aria-label="Search" onClick={toggleSearchModal}>
           <FaSearch />
         </button>
       </div>
@@ -49,19 +57,41 @@ export default function Navbar() {
         </div>  
 
         {/* Right Icons */}
-       <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute right-6">
-  <button aria-label="Cart" className="relative focus:outline-none">
-    <FaShoppingCart />
-    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 border-2 border-[#2f4f6f]"></span>
-  </button>
-  <button aria-label="User" className="focus:outline-none">
-    <FaUser />
-  </button>
-  <button onClick={toggleMobileMenu} className="md:hidden focus:outline-none">
-    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-  </button>
-</div>
-</div>
+        <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute right-6">
+          <button aria-label="Cart" className="relative focus:outline-none">
+          <FaShoppingCart />
+          <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 border-2 border-[#2f4f6f]"></span>
+        </button>
+        <button aria-label="User" className="focus:outline-none">
+          <FaUser />
+        </button>
+        <button onClick={toggleMobileMenu} className="md:hidden focus:outline-none">
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+      </div>
+
+      {isSearchModalOpen && (
+  <div className="fixed inset-0 z-50 bg-transparent flex items-center justify-center">
+    <div className="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
+      <button
+        onClick={toggleSearchModal}
+        className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+      >
+        <FaTimes />
+      </button>
+      <h2 className="text-lg font-semibold mb-4 text-black">Search</h2>
+      <input
+        type="text"
+        placeholder="Type to search..."
+        className="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#4bc1c9]"
+      />
+    </div>
+  </div>
+)}
+
+
+      
 
       {/* Navigation */}
       <nav className={`max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center border-b border-[#3f5f7f] ${isMobileMenuOpen ? 'block' : 'hidden md:flex'}`}>
