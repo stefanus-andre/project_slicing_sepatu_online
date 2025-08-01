@@ -34,34 +34,34 @@ export default function Navbar() {
     <header className="bg-[#2f4f6f] text-white shadow sticky top-0 z-50">
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* Left Icons */}
-        <div className="flex items-center gap-4 text-[#4bc1c9] text-lg absolute left-6">
-          <button aria-label="Search" className="focus:outline-none">
-            <FaSearch />
-          </button>
-        </div>
+      <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute left-6">
+        <button aria-label="Search" className="focus:outline-none">
+          <FaSearch />
+        </button>
+      </div>
+
 
         {/* Logo */}
         <div className="flex-grow flex justify-center">
           <h1 className="font-extrabold text-3xl md:text-4xl leading-none select-none" style={{ fontWeight: 900 }}>
             mino.
           </h1>
-        </div>
+        </div>  
 
         {/* Right Icons */}
-        <div className="flex items-center gap-4 text-[#4bc1c9] text-lg absolute right-6">
-          <button aria-label="Cart" className="relative focus:outline-none">
-            <FaShoppingCart />
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 border-2 border-[#2f4f6f]"></span>
-          </button>
-          <button aria-label="User" className="focus:outline-none">
-            <FaUser className="text-2xl md:text-3xl" />
-          </button>
-          {/* Hamburger Menu for Mobile */}
-          <button onClick={toggleMobileMenu} className="md:hidden focus:outline-none">
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
+       <div className="flex items-center gap-4 text-[#4bc1c9] text-2xl absolute right-6">
+  <button aria-label="Cart" className="relative focus:outline-none">
+    <FaShoppingCart />
+    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 border-2 border-[#2f4f6f]"></span>
+  </button>
+  <button aria-label="User" className="focus:outline-none">
+    <FaUser />
+  </button>
+  <button onClick={toggleMobileMenu} className="md:hidden focus:outline-none">
+    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+  </button>
+</div>
+</div>
 
       {/* Navigation */}
       <nav className={`max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center border-b border-[#3f5f7f] ${isMobileMenuOpen ? 'block' : 'hidden md:flex'}`}>
