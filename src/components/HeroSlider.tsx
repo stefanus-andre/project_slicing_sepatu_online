@@ -5,9 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  "https://s.abcnews.com/images/GMA/GMA_TRS_250410_RunningShoes_v01_KA_1746112779296_hpMain_16x9_992.jpg", 
+  "https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg", 
   "https://apparelresources.com/wp-content/uploads/2020/03/sneakers-vd.png", 
-  "https://apparelresources.com/wp-content/uploads/2020/03/sneakers-vd2.png"];
+  "https://apparelresources.com/wp-content/uploads/2020/03/sneakers-vd2.png"
+];
 
 export default function HeroSlider() {
   const settings = {
@@ -23,7 +24,11 @@ export default function HeroSlider() {
       <Slider {...settings}>
         {slides.map((img, i) => (
           <div key={i}>
-            <img src={img} alt={`Slide ${i + 1}`} className="w-full h-[600px] object-cover" />
+            <img
+              src={img}
+              alt={`Slide ${i + 1}`}
+              className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover"
+            />
           </div>
         ))}
       </Slider>
